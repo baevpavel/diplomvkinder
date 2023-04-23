@@ -8,14 +8,16 @@ from datetime import datetime
 
 vk = vk_api.VkApi(token=token_vkinder)
 
+
 def message_send(user_id, message, attachment=None):
     vk.method('messages.send',
-                            {'user_id': user_id,
-                            'message': message,
-                            'attachment': attachment,
-                            'random_id': get_random_id()
-                            }
-                            )
+              {'user_id': user_id,
+               'message': message,
+               'attachment': attachment,
+               'random_id': get_random_id()
+               }
+              )
+
 
 longpoll = VkLongPoll(vk)
 
